@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <title>জামিয়া ইসলামিয়া গোহাট্টা মাদরাসা</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans Bengali', 'Inter', sans-serif;
+            background-color: #f0fdf4; /* হালকা সবুজ ব্যাকগ্রাউন্ড */
+            color: #1a202c;
+        }
+        .header-bg {
+            background-color: #065f46; /* গাঢ় সবুজ */
+        }
+        .btn-primary {
+            background-color: #10b981; /* সবুজ */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #059669; /* গাঢ় সবুজ */
+        }
+        .section-title {
+            color: #065f46; /* গাঢ় সবুজ */
+        }
+        .feature-item {
+            background-color: #ecfdf5; /* হালকা সবুজ */
+            border-left: 4px solid #10b981; /* সবুজ বর্ডার */
+        }
+        .footer-bg {
+            background-color: #065f46; /* গাঢ় সবুজ */
+        }
+        /* Modal styles for feature details */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            max-height: 90%;
+            overflow-y: auto;
+            position: relative;
+        }
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen flex flex-col">
+        <header class="header-bg text-white py-4 shadow-lg rounded-b-lg w-full">
+            <div class="container mx-auto flex flex-col items-center justify-center px-2 sm:px-4 text-center">
+                <div class="flex flex-col md:flex-row items-center justify-center w-full mb-4 md:mb-0">
+                    <img src="photo.jpg" alt="মাদ্রাসার লোগো" class="h-24 w-24 rounded-full border-4 border-white shadow-md mb-2 md:mb-0 md:mr-4">
+                    <div class="text-center md:text-left overflow-hidden">
+                        <h1 class="text-2xl sm:text-3xl font-bold">الجامعة الاسلامية غوهتا مدرسه</h1>
+                        <h1 class="text-xl sm:text-2xl font-semibold">Jamia Islamia Gohatta Madrasah</h1>
+                        <p class="text-xs sm:text-sm mt-1">মোগরাপাড়া, সোনারগাঁও, নারায়ণগঞ্জ।</p>
+                        <p class="text-xs sm:text-sm">০১৬৩২৮৮১৩০৪, ০১৬১৫৫৩৮৪৭৪</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto p-6">
+            <section class="mb-12 text-center">
+                <h2 class="text-4xl font-extrabold section-title mb-6">আমাদের বৈশিষ্ট্য</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="feature-item p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2">১। মাদরাসাটি তালিমের সাথে সাথে তরবিয়ত করা।</h3>
+                        <p class="text-gray-700">শিক্ষার্থীদের শুধু জ্ঞান অর্জন নয়, বরং তাদের নৈতিক ও আধ্যাত্মিক বিকাশেও গুরুত্ব দেওয়া হয়।</p>
+                        <button class="btn-primary mt-4 px-4 py-2 rounded-full text-sm font-semibold feature-detail-btn"
+                                data-feature-title="মাদরাসাটি তালিমের সাথে সাথে তরবিয়ত করা।"
+                                data-full-description="জামিয়া ইসলামিয়া গোহাট্টা মাদরাসা শুধু অ্যাকাডেমিক শিক্ষার ওপরই জোর দেয় না, বরং শিক্ষার্থীদের সার্বিক নৈতিক ও আত্মিক উন্নয়নে বিশেষ নজর রাখে। এখানে ইসলামি জ্ঞানার্জনের পাশাপাশি প্রতিটি শিক্ষার্থীর আচার-ব্যবহার, চরিত্র গঠন এবং আল্লাহর সাথে তাদের সম্পর্ককে মজবুত করার জন্য নিবিড় তরবিয়ত প্রদান করা হয়। ফলে, শিক্ষার্থীরা শুধু আলেম হিসেবে নয়, বরং আদর্শ মুসলিম হিসেবে গড়ে ওঠে।">
+                            বিস্তারিত জানুন ✨
+                        </button>
+                    </div>
+                    <div class="feature-item p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2">২। চব্বিশ ঘণ্টা আমলি পরিবেশে সুন্নতের অনুশীলন করানো।</h3>
+                        <p class="text-gray-700">প্রতিটি শিক্ষার্থীকে সুন্নতের সঠিক অনুশীলনে উৎসাহিত করা হয়, যা তাদের দৈনন্দিন জীবনে প্রতিফলিত হয়।</p>
+                        <button class="btn-primary mt-4 px-4 py-2 rounded-full text-sm font-semibold feature-detail-btn"
+                                data-feature-title="চব্বিশ ঘণ্টা আমলি পরিবেশে সুন্নতের অনুশীলন করানো।"
+                                data-full-description="এই মাদরাসায় শিক্ষার্থীরা সার্বক্ষণিক আমলি পরিবেশের মধ্যে থাকে। এখানে দৈনন্দিন জীবনের প্রতিটি ক্ষেত্রে রাসূলুল্লাহ (সা.)-এর সুন্নতের সঠিক অনুশীলন করানো হয়। শিক্ষক ও বড় শিক্ষার্থীদের মাধ্যমে সুন্নতের গুরুত্ব বোঝানো হয় এবং হাতে-কলমে শিখিয়ে দেওয়া হয় কিভাবে জীবনের প্রতিটি মুহূর্তে সুন্নতকে ধারণ করা যায়। এটি তাদের মধ্যে দ্বীনি উদ্দীপনা সৃষ্টি করে এবং একটি সুশৃঙ্খল আমলি জীবন গঠনে সহায়তা করে।">
+                            বিস্তারিত জানুন ✨
+                        </button>
+                    </div>
+                    <div class="feature-item p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2">৩। সকালে নাস্তার ছুটির সাথে ইশরাক এর সালাত, ১০ টায় ঘুমের আগে চাশতের সালাত আদায়, বাদ আসর তালিম ও ২/৩ জন মিলে ঈমানী মোযাকারা, বাদ মাগরিব আওয়াবিন সালাত আদায়, রাতে শোয়ার আগে নামাযের মধ্যে তিলাওয়াত ও রাতে তাহাজ্জুদের আমল।</h3>
+                        <p class="text-gray-700">নিয়মিত সালাত ও ইবাদতের মাধ্যমে শিক্ষার্থীদের আধ্যাত্মিক জীবন উন্নত করা হয়।</p>
+                        <button class="btn-primary mt-4 px-4 py-2 rounded-full text-sm font-semibold feature-detail-btn"
+                                data-feature-title="সকালে নাস্তার ছুটির সাথে ইশরাক এর সালাত, ১০ টায় ঘুমের আগে চাশতের সালাত আদায়, বাদ আসর তালিম ও ২/৩ জন মিলে ঈমানী মোযাকারা, বাদ মাগরিব আওয়াবিন সালাত আদায়, রাতে শোয়ার আগে নামাযের মধ্যে তিলাওয়াত ও রাতে তাহাজ্জুদের আমল।"
+                                data-full-description="জামিয়া ইসলামিয়া গোহাট্টা মাদরাসার দৈনন্দিন রুটিনে সালাত ও অন্যান্য ইবাদতের উপর বিশেষ গুরুত্বারোপ করা হয়। ফজর ও নাস্তার ছুটির পর ইশরাক, ১০টায় ঘুমের আগে চাশতের সালাত, আসরের পর সম্মিলিত তালিম ও ঈমানী মোযাকারা, মাগরিবের পর আওয়াবিন এবং তাহাজ্জুদের নিয়মিত আমল করানো হয়। এর মাধ্যমে শিক্ষার্থীদের আধ্যাত্মিক আত্মোন্নতি, আল্লাহর সাথে সম্পর্ক গভীর করা এবং দ্বীনের প্রতি তাদের ভালোবাসা বৃদ্ধি পায়।">
+                            বিস্তারিত জানুন ✨
+                        </button>
+                    </div>
+                    <div class="feature-item p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2">৪। বড়ো শিক্ষার্থীদের ২৪ ঘন্টার জামাতে যাওয়া, বৃহস্পতিবার শবগুজারীতে শিরকত করা এবং বন্ধের সময় ৭/১০ জামাত ও রমাদানে চিল্লার জামাতে বের হওয়ার কোশেশ করা।</h3>
+                        <p class="text-gray-700">শিক্ষার্থীদের দাওয়াত ও তাবলীগের কাজে উৎসাহিত করা হয়।</p>
+                        <button class="btn-primary mt-4 px-4 py-2 rounded-full text-sm font-semibold feature-detail-btn"
+                                data-feature-title="বড়ো শিক্ষার্থীদের ২৪ ঘন্টার জামাতে যাওয়া, বৃহস্পতিবার শবগুজারীতে শিরকত করা এবং বন্ধের সময় ৭/১০ জামাত ও রমাদানে চিল্লার জামাতে বের হওয়ার কোশেশ করা।"
+                                data-full-description="এই মাদরাসার বড় শিক্ষার্থীদের দাওয়াত ও তাবলীগের কাজে অংশগ্রহণ করতে উৎসাহিত করা হয়। তারা ২৪ ঘন্টার জন্য জামাতে বের হয়, বৃহস্পতিবারের শবগুজারীতে অংশ নেয় এবং ছুটির সময়ে ৭-১০ দিনের জামাত বা রমাদানে চিল্লার জামাতে সময় লাগায়। এর মাধ্যমে তারা দ্বীনের দাওয়াত দেওয়ার গুরুত্ব অনুধাবন করে এবং ভবিষ্যতে নিজেদেরকে একজন দায়ি হিসেবে গড়ে তোলার প্রস্তুতি গ্রহণ করে।">
+                            বিস্তারিত জানুন ✨
+                        </button>
+                    </div>
+                    <div class="feature-item p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2">৫। পড়াশোনার পাশাপাশি কিতাব বিভাগের তামরিন করানো।</h3>
+                        <p class="text-gray-700">তাত্ত্বিক জ্ঞানের পাশাপাশি ব্যবহারিক প্রশিক্ষণের উপরও জোর দেওয়া হয়।</p>
+                        <button class="btn-primary mt-4 px-4 py-2 rounded-full text-sm font-semibold feature-detail-btn"
+                                data-feature-title="পড়াশোনার পাশাপাশি কিতাব বিভাগের তামরিন করানো।"
+                                data-full-description="জামিয়া ইসলামিয়া গোহাট্টা মাদরাসায় শুধুমাত্র তাত্ত্বিক জ্ঞান দান করা হয় না, বরং কিতাব বিভাগের শিক্ষার্থীদের ব্যবহারিক প্রশিক্ষণের (তামরিন) ব্যবস্থা করা হয়। এতে কিতাবের বিষয়বস্তু সম্পর্কে তাদের গভীর ধারণা তৈরি হয় এবং তারা পড়াশোনার পাশাপাশি গবেষণা ও বিশ্লেষণের দক্ষতা অর্জন করে। এর মাধ্যমে তারা নিজেদেরকে ভবিষ্যতের ইসলামিক স্কলার হিসেবে প্রস্তুত করতে পারে।">
+                            বিস্তারিত জানুন ✨
+                        </button>
+                    </div>
+                    <div class="feature-item p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2">৬। বছরের শেষে হামদ, নাত, তিলাওয়াত, আরবি, বাংলা ও ইংরেজি হস্তাক্ষর প্রতিযোগিতার ব্যবস্থা করে পুরষ্কার ব্যবস্থা।</h3>
+                        <p class="text-gray-700">শিক্ষার্থীদের মেধা ও সৃজনশীলতা বিকাশের জন্য বিভিন্ন প্রতিযোগিতার আয়োজন করা হয়।</p>
+                        <button class="btn-primary mt-4 px-4 py-2 rounded-full text-sm font-semibold feature-detail-btn"
+                                data-feature-title="বছরের শেষে হামদ, নাত, তিলাওয়াত, আরবি, বাংলা ও ইংরেজি হস্তাক্ষর প্রতিযোগিতার ব্যবস্থা করে পুরষ্কার ব্যবস্থা।"
+                                data-full-description="শিক্ষার্থীদের সুপ্ত প্রতিভা বিকাশের লক্ষ্যে জামিয়া ইসলামিয়া গোহাট্টা মাদরাসা প্রতি বছর হামদ, নাত, তিলাওয়াত, আরবি, বাংলা ও ইংরেজি হস্তাক্ষর প্রতিযোগিতার আয়োজন করে। এতে শিক্ষার্থীরা তাদের সৃজনশীলতা প্রকাশ করার সুযোগ পায় এবং প্রতিযোগিতার মাধ্যমে তাদের দক্ষতা বৃদ্ধি পায়। সফল শিক্ষার্থীদের পুরস্কৃত করে তাদের উৎসাহিত করা হয়, যা তাদের আত্মবিশ্বাস বাড়াতে সাহায্য করে।">
+                            বিস্তারিত জানুন ✨
+                        </button>
+                    </div>
+                    <div class="feature-item p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2">৭। মাদানি নেসাব এর পাশাপাশি স্কুল ও আলিয়া মাদ্রাসার পরীক্ষায় অংশ গ্রহণ করানো।</h3>
+                        <p class="text-gray-700">আধুনিক শিক্ষার পাশাপাশি প্রচলিত শিক্ষা ব্যবস্থায়ও শিক্ষার্থীদের অংশগ্রহণের সুযোগ দেওয়া হয়।</p>
+                        <button class="btn-primary mt-4 px-4 py-2 rounded-full text-sm font-semibold feature-detail-btn"
+                                data-feature-title="মাদানি নেসাব এর পাশাপাশি স্কুল ও আলিয়া মাদ্রাসার পরীক্ষায় অংশ গ্রহণ করানো."
+                                data-full-description="জামিয়া ইসলামিয়া গোহাট্টা মাদরাসায় শিক্ষার্থীদের মাদানি নেসাবের পাশাপাশি আধুনিক শিক্ষার সাথেও পরিচিত করানো হয়। যারা আগ্রহী, তাদের স্কুল ও আলিয়া মাদরাসার পরীক্ষায় অংশগ্রহণ করার সুযোগ দেওয়া হয়। এর মাধ্যমে শিক্ষার্থীরা দ্বীনি ও আধুনিক শিক্ষার মধ্যে একটি ভারসাম্যপূর্ণ জ্ঞান অর্জন করতে পারে এবং উচ্চশিক্ষার বিভিন্ন ক্ষেত্রে নিজেদের যোগ্য করে তুলতে পারে।">
+                            বিস্তারিত জানুন ✨
+                        </button>
+                    </div>
+                    <div class="feature-item p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2">৮। সর্বোপরি আরবি, উর্দু ও ইংরেজিতে পারদর্শী করে সারা পৃথিবীতে দাওয়াতের উপযোগী করে গড়ে তোলা।</h3>
+                        <p class="text-gray-700">শিক্ষার্থীদের বহুভাষিক দক্ষতা অর্জনে সহায়তা করা হয়, যাতে তারা বিশ্বব্যাপী দাওয়াতের কাজ করতে পারে।</p>
+                        <button class="btn-primary mt-4 px-4 py-2 rounded-full text-sm font-semibold feature-detail-btn"
+                                data-feature-title="সর্বোপরি আরবি, উর্দু ও ইংরেজিতে পারদর্শী করে সারা পৃথিবীতে দাওয়াতের উপযোগী করে গড়ে তোলা।"
+                                data-full-description="জামিয়া ইসলামিয়া গোহাট্টা মাদরাসার অন্যতম লক্ষ্য হলো শিক্ষার্থীদেরকে আরবি, উর্দু ও ইংরেজিতে পারদর্শী করে তোলা। এই ভাষাগুলোতে দক্ষতা অর্জনের মাধ্যমে শিক্ষার্থীরা শুধু দ্বীনি কিতাবাদি অধ্যয়নে সক্ষম হয় না, বরং সারা পৃথিবীতে দ্বীনের দাওয়াত পৌঁছানোর জন্য নিজেদেরকে প্রস্তুত করতে পারে। এটি তাদেরকে বৈশ্বিক পরিসরে ইসলাম প্রচারে কার্যকর ভূমিকা রাখতে সাহায্য করে।">
+                            বিস্তারিত জানুন ✨
+                        </button>
+                    </div>
+                    <div class="feature-item p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2">৯। মোট কথা ইলম হাসিল করার উদ্দেশ্য দুনিয়া হাসিল নয় বরং আখিরাতে আল্লাহর সন্তুষ্টি অর্জন করা।</h3>
+                        <p class="text-gray-700">শিক্ষার মূল উদ্দেশ্য হিসেবে আল্লাহর সন্তুষ্টি অর্জনকে প্রাধান্য দেওয়া হয়।</p>
+                        <button class="btn-primary mt-4 px-4 py-2 rounded-full text-sm font-semibold feature-detail-btn"
+                                data-feature-title="মোট কথা ইলম হাসিল করার উদ্দেশ্য দুনিয়া হাসিল নয় বরং আখিরাতে আল্লাহর সন্তুষ্টি অর্জন করা।"
+                                data-full-description="এই মাদরাসার শিক্ষার মূল দর্শন হলো, জ্ঞান অর্জন বা 'ইলম হাসিলের' উদ্দেশ্য দুনিয়াবী প্রাপ্তি বা পার্থিব সফলতা অর্জন নয়, বরং আখিরাতে মহান আল্লাহর সন্তুষ্টি ও নৈকট্য লাভ করা। এখানে শিক্ষার্থীদেরকে শেখানো হয় যে জ্ঞান হলো আল্লাহর এক নেয়ামত, যা তাঁর সান্নিধ্য লাভের এবং তাঁর দ্বীনকে সমুন্নত করার মাধ্যম। এটি তাদের মনে দ্বীনি স্পৃহা এবং পরকালীন জীবনের প্রতি গভীর বিশ্বাস তৈরি করে।">
+                            বিস্তারিত জানুন ✨
+                        </button>
+                    </div>
+                    <div class="feature-item p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2">১০। আমরা শিক্ষার্থীদের সন্তানতুল্য মনে করে শাসন নয় বরং বুঝিয়ে এবং কাউন্সিলিং এর মাধ্যমে শিক্ষা কার্যক্রম এ প্রাধান্য দিয়ে থাকি।</h3>
+                        <p class="text-gray-700">শিক্ষার্থীদের প্রতি সহানুভূতিশীল আচরণ এবং কাউন্সিলিং এর মাধ্যমে শিক্ষাদান করা হয়।</p>
+                        <button class="btn-primary mt-4 px-4 py-2 rounded-full text-sm font-semibold feature-detail-btn"
+                                data-feature-title="আমরা শিক্ষার্থীদের সন্তানতুল্য মনে করে শাসন নয় বরং বুঝিয়ে এবং কাউন্সিলিং এর মাধ্যমে শিক্ষা কার্যক্রম এ প্রাধান্য দিয়ে থাকি।"
+                                data-full-description="জামিয়া ইসলামিয়া গোহাট্টা মাদরাসায় শিক্ষার্থীদেরকে নিজেদের সন্তানের মতোই দেখা হয়। এখানে জোরপূর্বক শাসনের পরিবর্তে ভালোবাসা, বোঝানো এবং গঠনমূলক কাউন্সিলিং-এর মাধ্যমে শিক্ষাদান করা হয়। প্রতিটি শিক্ষার্থীর মানসিক অবস্থা এবং শেখার পদ্ধতিকে গুরুত্ব দেওয়া হয়, যাতে তারা নির্ভয়ে নিজেদের সমস্যা তুলে ধরতে পারে এবং বন্ধুত্বপূর্ণ পরিবেশে জ্ঞান অর্জন করতে পারে। এটি শিক্ষার্থীদের মধ্যে শিক্ষক-ছাত্রের সম্পর্ককে মজবুত করে এবং তাদের মানসিক বিকাশকে উৎসাহিত করে।">
+                            বিস্তারিত জানুন ✨
+                        </button>
+                    </div>
+                    <div class="feature-item p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2">১১। হিফয সমাপনী করে যারা কিতাব বিভাগ এ আসে তাদের জন্য ১ ঘন্টা বাদ ফজর ও বাদ মাগরিব কুরআনুল কারিম ইয়াদ করা ও শুনানোর ব্যবস্থা।</h3>
+                        <p class="text-gray-700">হিফয সম্পন্নকারী শিক্ষার্থীদের জন্য কুরআনুল কারিম ইয়াদ ও শুনানোর বিশেষ ব্যবস্থা রয়েছে।</p>
+                        <button class="btn-primary mt-4 px-4 py-2 rounded-full text-sm font-semibold feature-detail-btn"
+                                data-feature-title="হিফয সমাপনী করে যারা কিতাব বিভাগ এ আসে তাদের জন্য ১ ঘন্টা বাদ ফজর ও বাদ মাগরিব কুরআনুল কারিম ইয়াদ করা ও শুনানোর ব্যবস্থা।"
+                                data-full-description="জামিয়া ইসলামিয়া গোহাট্টা মাদরাসায় যারা হিফয সম্পন্ন করে কিতাব বিভাগে ভর্তি হয়, তাদের জন্য বিশেষ ব্যবস্থা রাখা হয়েছে। ফজরের পর এবং মাগরিবের পর ১ ঘন্টা করে কুরআনুল কারিম ইয়াদ করা ও মুখস্থ শোনানোর সুযোগ দেওয়া হয়। এর মাধ্যমে হিফয সম্পন্নকারী শিক্ষার্থীরা কুরআনের সাথে তাদের সম্পর্ককে আরও মজবুত রাখতে পারে এবং কিতাব বিভাগের পড়াশোনার পাশাপাশি তাদের হিফযকে ধরে রাখতে পারে।">
+                            বিস্তারিত জানুন ✨
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="w-full flex justify-center py-6">
+            <a href="#" class="btn-primary px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                ভর্তির জন্য আবেদন করুন
+            </a>
+        </div>
+
+        <footer class="footer-bg text-white py-6 mt-12 rounded-t-lg">
+            <div class="container mx-auto text-center px-4">
+                <p>&copy; ২০২৫ জামিয়া ইসলামিয়া গোহাট্টা মাদরাসা। সর্বস্বত্ব সংরক্ষিত।</p>
+                <p class="mt-2">যোগাযোগ: ০১৬৩২৮৮১৩০৪, ০১৬১৫৫৩৮৪৭৪ | মোগরাপাড়া, সোনারগাঁও, নারায়ণগঞ্জ</p>
+                <p class="mt-2">মুহতামিম: মাওলানা সৈয়দ আবু নছর হেলালী</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="featureDetailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModalBtn">&times;</span>
+            <h3 class="text-2xl font-bold section-title mb-4" id="modalFeatureTitle"></h3>
+            <div id="modalFeatureDescription" class="text-gray-800 text-lg">
+                <p id="modalFeatureText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const featureDetailButtons = document.querySelectorAll('.feature-detail-btn');
+            const modal = document.getElementById('featureDetailModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const modalFeatureTitle = document.getElementById('modalFeatureTitle');
+            const modalFeatureText = document.getElementById('modalFeatureText');
+
+            function showFeatureModal() {
+                modal.style.display = 'flex';
+            }
+
+            function hideFeatureModal() {
+                modal.style.display = 'none';
+            }
+
+            closeModalBtn.addEventListener('click', hideFeatureModal);
+
+            window.addEventListener('click', (event) => {
+                if (event.target == modal) {
+                    hideFeatureModal();
+                }
+            });
+
+            featureDetailButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const featureTitle = button.dataset.featureTitle;
+                    const fullDescription = button.dataset.fullDescription;
+
+                    modalFeatureTitle.textContent = featureTitle;
+                    modalFeatureText.textContent = fullDescription;
+                    showFeatureModal();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
